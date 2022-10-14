@@ -1,0 +1,9 @@
+<h1>Menu {{flag}}</h1>
+<button (click)="on()" class="btn bg-info" type="button">bật</button>
+<button (click)="off()" class="btn bg-primary" type="button">tắt</button>
+<ul *ngIf="flag">
+  <li *ngFor="let m of menu;let i =index;">
+  <img src="{{menu[i].icon}}"width="100">
+    {{menu[i].name}}
+  </li>
+</ul>
